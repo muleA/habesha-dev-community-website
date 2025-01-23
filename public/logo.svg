@@ -1,0 +1,49 @@
+ <svg
+        width="40"
+        height="40"
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="20" cy="20" r="20" fill="url(#ethiopian_gradient)" />
+
+        <path
+          d="M12 12L12 28M12 20H18M18 12V28"
+          stroke="white"
+          strokeWidth="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+
+        <path
+          d="M24 16L28 20L24 24"
+          stroke="white"
+          strokeWidth="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+
+        <circle
+          cx="20"
+          cy="20"
+          r="8"
+          stroke="white"
+          strokeWidth="1.5"
+          strokeDasharray="3 3"
+        />
+
+        <defs>
+          <linearGradient
+            id="ethiopian_gradient"
+            x1="0"
+            y1="0"
+            x2="40"
+            y2="40"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop offset="0%" stopColor="#009B3A" /> 
+            <stop offset="50%" stopColor="#FEDD00" /> 
+            <stop offset="100%" stopColor="#EF2118" />
+          </linearGradient>
+        </defs>
+      </svg>
