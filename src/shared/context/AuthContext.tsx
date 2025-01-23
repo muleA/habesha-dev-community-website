@@ -1,10 +1,11 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useMemo, useState } from "react";
 
 interface User {
   id: number;
   name: string;
   email: string;
   avatar?: string;
+  password?:string
 }
 
 interface AuthContextType {
@@ -28,6 +29,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       id: 1,
       name: "Root",
       email: email,
+      password:password,
       avatar: "https://avatars.githubusercontent.com/u/1",
     };
     setUser(mockUser);
@@ -39,10 +41,15 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     localStorage.removeItem("user");
   };
 
+  const value = useMemo(() => ({
+    user,
+    login,
+    logout,
+    isAuthenticated: !!user
+  }), [user]);
+
   return (
-    <AuthContext.Provider
-      value={{ user, login, logout, isAuthenticated: !!user }}
-    >
+    <AuthContext.Provider value={value}>
       {children}
     </AuthContext.Provider>
   );
