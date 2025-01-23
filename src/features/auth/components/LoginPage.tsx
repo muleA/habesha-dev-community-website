@@ -28,7 +28,10 @@ export const LoginPage = (): JSX.Element => {
       <Title ta="center" mb={30}>
         Welcome back!
       </Title>
-
+  {/* Info Message */}
+  <Title ta="center" c="dimmed" size="sm" mb={20}>
+        You can use any username and password to log in for demonstration purposes.
+      </Title>
       <Paper withBorder shadow="md" p={30} radius="md">
         <form onSubmit={handleSubmit}>
           <Stack>
